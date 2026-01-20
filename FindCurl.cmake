@@ -15,19 +15,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# - Try to find RDK Storage Manager library
-# Once done this will define
-#  NOPOLL_FOUND - System has Nopoll
-#  NOPOLL_LIBRARIES - The libraries needed to use Nopoll
+# - Try to find curl
 
 find_package(PkgConfig)
 
-find_path(NOPOLL_INCLUDE_DIRS NAMES nopoll.h PATH_SUFFIXES nopoll)
-#find_path(NOPOLL_INCLUDE_DIRS NAMES libIARM.h PATH_SUFFIXES rdk/iarmbus)
+find_library(CURL_LIBRARY NAMES curl)
 
-find_library(NOPOLL_LIBRARIES NAMES nopoll)
+set(CURL_LIBRARY ${CURL_LIBRARY} CACHE PATH "Path to curl library")
+
+include(FindPackageHandleStandardArgs)
 
 mark_as_advanced(
-    NOPOLL_FOUND
-    NOPOLL_INCLUDE_DIRS
-    NOPOLL_LIBRARIES)
+    CURL_FOUND
+    CURL_INCLUDE_DIRS
+    CURL_LIBRARIES
+    CURL_LIBRARY_DIRS
+    CURL_FLAGS)

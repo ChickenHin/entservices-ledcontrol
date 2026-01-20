@@ -25,9 +25,6 @@ find_package(WPEFramework)
 # are located in the cmake directory. Include it in the search.
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/")
 
-# Default option for LEDControl plugin (can be overridden by services.cmake)
-option(PLUGIN_LEDCONTROL "LEDControl plugin" ON)
-
 option(COMCAST_CONFIG "Comcast services configuration" ON)
 if(COMCAST_CONFIG)
     include(services.cmake)
@@ -39,8 +36,28 @@ string(TOLOWER ${NAMESPACE} STORAGE_DIRECTORY)
 # for writing pc and config files
 include(CmakeHelperFunctions)
 
+if(RDK_SERVICES_L1_TEST)
+    add_subdirectory(Tests/L1Tests)
+endif()
+
 if(RDK_SERVICE_L2_TEST)
     add_subdirectory(Tests/L2Tests)
+endif()
+
+if(PLUGIN_VOICECONTROL)
+    add_subdirectory(VoiceControl)
+endif()
+
+if(PLUGIN_REMOTECONTROL)
+	add_subdirectory(RemoteControl)
+endif()
+
+if(PLUGIN_FRONTPANEL)
+    add_subdirectory(FrontPanel)
+endif()
+
+if(PLUGIN_MOTION_DETECTION)
+    add_subdirectory(MotionDetection)
 endif()
 
 if(PLUGIN_LEDCONTROL)

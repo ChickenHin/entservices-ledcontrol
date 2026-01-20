@@ -10,7 +10,7 @@ cd ${GITHUB_WORKSPACE}
 #1. Install Dependencies and packages
 
 apt update
-apt install -y libcurl4-openssl-dev valgrind lcov clang libsystemd-dev libboost-all-dev libwebsocketpp-dev meson curl libunwind-dev libdrm-dev
+apt install -y libcurl4-openssl-dev valgrind lcov clang libsystemd-dev libboost-all-dev libwebsocketpp-dev meson curl libunwind-dev libdrm-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 pip install jsonref
 
 # Clone the required repositories
@@ -130,7 +130,6 @@ touch pkg.h
 touch wpa_ctrl.h
 touch proc/readproc.h
 touch dsFPD.h
-touch dsFPDTypes.h
 echo "files created successfully"
 echo "======================================================================================"
 

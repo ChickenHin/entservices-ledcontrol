@@ -44,7 +44,7 @@ if(RDK_SERVICE_L2_TEST)
 endif()
 
 if(PLUGIN_LEDCONTROL)
-    add_subdirectory(LEDControl)
+    add_subdirectory(plugin)
 endif()
 
 if(WPEFRAMEWORK_CREATE_IPKG_TARGETS)

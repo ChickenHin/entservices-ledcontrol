@@ -130,6 +130,7 @@ touch pkg.h
 touch wpa_ctrl.h
 touch proc/readproc.h
 touch dsFPD.h
+touch dsFPDTypes.h
 echo "files created successfully"
 echo "======================================================================================"
 

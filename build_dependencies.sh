@@ -92,6 +92,8 @@ echo " Empty mocks creation to avoid compilation errors"
 echo "======================================================================================"
 mkdir -p headers
 mkdir -p headers/rdk/ds
+mkdir -p headers/rdk/iarmbus
+mkdir -p headers/rdk/iarmmgrs-hal
 mkdir -p headers/ccec/drivers
 mkdir -p headers/proc
 echo "dir created successfully"
@@ -122,6 +124,12 @@ touch rdk/ds/videoResolution.hpp
 touch rdk/ds/frontPanelIndicator.hpp
 touch rdk/ds/frontPanelConfig.hpp
 touch rdk/ds/frontPanelTextDisplay.hpp
+touch rdk/iarmbus/libIARM.h
+touch rdk/iarmbus/libIBus.h
+touch rdk/iarmbus/libIBusDaemon.h
+touch rdk/iarmmgrs-hal/deepSleepMgr.h
+touch rdk/iarmmgrs-hal/mfrMgr.h
+touch rdk/iarmmgrs-hal/sysMgr.h
 touch libudev.h
 touch rfcapi.h
 touch rbus.h

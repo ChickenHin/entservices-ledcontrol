@@ -25,6 +25,9 @@ find_package(WPEFramework)
 # are located in the cmake directory. Include it in the search.
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/")
 
+# Default option for LEDControl plugin (can be overridden by services.cmake)
+option(PLUGIN_LEDCONTROL "LEDControl plugin" ON)
+
 option(COMCAST_CONFIG "Comcast services configuration" ON)
 if(COMCAST_CONFIG)
     include(services.cmake)

@@ -6,7 +6,7 @@ GITHUB_WORKSPACE="${PWD}"
 ls -la ${GITHUB_WORKSPACE}
 ############################
 # Build entservices-ledcontrol
-echo "buliding entservices-ledcontrol"
+echo "building entservices-ledcontrol"
 
 cd ${GITHUB_WORKSPACE}
 cmake -G Ninja -S "$GITHUB_WORKSPACE" -B build/entservices-ledcontrol \

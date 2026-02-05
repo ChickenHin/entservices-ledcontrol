@@ -48,12 +48,6 @@ if(PLUGIN_CONTINUEWATCHING)
 endif()
 
 
-if(PLUGIN_CONTINUEWATCHING)
-    if(CONTINUEWATCHING_DISABLE_SECAPI)
-        add_definitions (-DDISABLE_SECAPI)
-    endif()
-endif()
-
 if (BUILD_DBUS)
     message("Building for DBUS")
 
@@ -61,6 +55,11 @@ if (BUILD_DBUS)
     option(BUILD_DBUS "BUILD_DBUS" ON)
     add_definitions (-DIARM_USE_DBUS)
     option(IARM_USE_DBUS "IARM_USE_DBUS" ON)
+endif()
+
+if (BUILD_ENABLE_CLOCK)
+    message("Building with clock support")
+    add_definitions (-DCLOCK_BRIGHTNESS_ENABLED)
 endif()
 
 if (BUILD_ENABLE_TELEMETRY_LOGGING)

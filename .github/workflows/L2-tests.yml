@@ -98,7 +98,7 @@ jobs:
         with:
           repository: rdkcentral/entservices-ledcontrol
           path: entservices-ledcontrol
-          ref: develop
+          ref: RDKEMW-12801
 
       - name: Checkout entservices-testframework
         uses: actions/checkout@v3

@@ -98,14 +98,14 @@ jobs:
         with:
           repository: rdkcentral/entservices-ledcontrol
           path: entservices-ledcontrol
-          ref: RDKEMW-12801
+          ref: develop
 
       - name: Checkout entservices-testframework
         uses: actions/checkout@v3
         with:
           repository: rdkcentral/entservices-testframework
           path: entservices-testframework
-          ref: RDKEMW-12801
+          ref: develop
           token: ${{ secrets.RDKCM_RDKE }}
 
       - name: Checkout googletest

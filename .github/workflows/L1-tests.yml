@@ -139,7 +139,7 @@ jobs:
         with:
           repository: rdkcentral/entservices-ledcontrol
           path: entservices-ledcontrol
-          ref: RDKEMW-12801
+          ref: develop
 
       - name: Checkout googletest
         if: steps.cache.outputs.cache-hit != 'true'
